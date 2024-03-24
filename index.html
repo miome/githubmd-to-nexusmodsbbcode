@@ -1,25 +1,12 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <meta charset="UTF-8">
-    <meta name="author" content="_iPhoenix_" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <!-- Google Analytics :) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109579764-3"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-
-      function gtag() {
-        dataLayer.push(arguments)
-      }
-      gtag("js", new Date), gtag("config", "UA-109579764-3")
-
-    </script>
     <link rel="stylesheet" href="style.css" />
     <style>
       td {
-        width: 25%;
+        width: 50%;
         padding: 0;
         margin: 0;
         overflow-wrap: break-word;
@@ -94,7 +81,7 @@
       document.getElementById("input").oninput = () => {
         var result = document.getElementById("input").value;
         var result2 = result;
-        var HTMLreplacements = [ //yes, there are better ways. No, I do not care. Be happy it "works", but do not touch x.x
+        var HTMLreplacements = [ //legend-of-phoenix: yes, there are better ways. No, I do not care. Be happy it "works", but do not touch x.x
           //actual replacements
           ["\\n?^#### (.*)$\\n?", "\n<h4>$1</h4>\n"],
           ["\\n?^### (.*)$\\n?", "\n<h3>$1</h3>\n"],
@@ -129,10 +116,10 @@
           ["^<br />> ", "<br />"]
         ]
         var BBcodereplacements = [
-          ["\\n?^## (.*)$\\n?", "\n[size=16][b]$1[/b][/size]\n"],
-          ["\\n?^# (.*)$\\n?", "\n[size=20][b]$1[/b][/size]\n"],
-          ["^(.+)\\n===+$\\n?", "\n[size=20][b]$1[/b][/size]\n"],
-          ["^(.+)\\n---+$\\n?", "\n[size=16][b]$1[/b][/size]>\n"],
+          ["\\n?^## (.*)$\\n?", "\n[size=4][b]$1[/b][/size]\n"],
+          ["\\n?^# (.*)$\\n?", "\n[size=6][b]$1[/b][/size]\n"],
+          ["^(.+)\\n===+$\\n?", "\n[size=6][b]$1[/b][/size]\n"],
+          ["^(.+)\\n---+$\\n?", "\n[size=4][b]$1[/b][/size]>\n"],
           ["\\*\\*(.*?)\\*\\*", "[b]$1[/b]"],
           ["~~(.*?)~~", "[strike]$1[/strike]"],
           ["^\\s+[*\\-+] (.*)$\\n?", "[*]$1\n"],
