@@ -16,7 +16,7 @@
 
       table {
         width: 100%;
-        height: 100vh;
+        height: 100%;
         border-collapse: collapse;
         table-layout: fixed;
       }
@@ -55,22 +55,23 @@
   </head>
 
   <body>
+      <h1>GitHub Markdown to Nexusmods BBCode converter</h1>
+      <p>Directions: <ul><li>Open the raw version of a .md file</li>
+           <li>Copy-all</li>
+           <li>Paste in the first box below</li>
+           <li>Select and copy all text that appears in the second box</li>
+           <li>In NexusMods editor, click 'BBCode', then paste the text</li>
+           <li>Click 'BBCode' again. You can now see how your document will look in NexusMods. </li>
+           <li>Use the Nexusmods editor to add any additional formatting you want</li>
+           <li>Anything go wrong? Please <a href="https://github.com/miome/githubmd-to-nexusmodsbbcode/issues">let me know!</a></li></ul></p>
     <table>
       <tr>
-        <th>Input (Markdown)</th>
-        <th>HTML render</th>
-        <th>Raw HTML</th>
-        <th>BBCode</th>
+        <th>Markdown (.md) from GitHub</th>
+        <th>NexusMods BBCode</th>
       </tr>
       <tr>
         <td>
           <textarea id="input"></textarea>
-        </td>
-        <td>
-          <div id="render"></div>
-        </td>
-        <td>
-          <pre id="raw"></pre>
         </td>
         <td>
           <pre id="bbcode"></pre>
@@ -154,8 +155,6 @@
         if (result2.startsWith('\n')) {
           result2 = result2.substring(1);
         }
-        document.getElementById("render").innerHTML = result;
-        document.getElementById("raw").innerText = result;
         document.getElementById("bbcode").innerText = result2;
       }
     </script>
